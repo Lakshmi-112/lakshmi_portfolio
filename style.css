@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #5f0f40;
+  color: bisque;
+}
+
+/* ---------------- Header ---------------- */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: #5f0f40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  animation: slideRight 0.5s ease forwards;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: bisque;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ffbf69;
+}
+
+/* ---------------- Home ---------------- */
+
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 10%;
+  background: #5f0f40;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  animation: slideRight 0.5s ease forwards;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0;
+  animation: slideBottom 0.5s ease forwards;
+}
+
+.home-content h3 span {
+  color: #ffbf69;
+}
+
+.home-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  animation: slideLeft 0.5s ease forwards;
+}
+
+.home-sci a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px 0 0;
+  border: 2px solid lightskyblue;
+  border-radius: 50%;
+  color: #ffbf69;
+  transition: 0.3s;
+}
+
+.home-sci a:hover {
+  background-color: #ffbf69;
+  color: #000;
+  box-shadow: 0 0 10px #ffbf69;
+}
+
+.btn-box {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: transparent;
+  color: antiquewhite;
+  font-weight: 600;
+  border: 2px solid #ffbf69;
+  box-shadow: 0 0 5px #ffbf69;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-box:hover {
+  background: #ffbf69;
+  color: black;
+}
+
+/* ---------------- About ---------------- */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 100px 10%;
+  align-items: center;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ffbf69;
+}
+
+.about-text h2 {
+  font-size: 48px;
+}
+
+.about-text h2 span {
+  color: #ffbf69;
+}
+
+.about-text h4 {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ---------------- Skills ---------------- */
+
+.sub-title {
+  text-align: center;
+  font-size: 36px;
+  margin: 40px 0;
+}
+
+.container1 {
+  padding: 50px 10%;
+}
+
+.heading1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.Technical-bars .bar {
+  margin-bottom: 30px;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .progress-line {
+  width: 100%;
+  height: 6px;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.Technical-bars .bar .progress-line span {
+  display: block;
+  height: 100%;
+  background: #ffbf69;
+  animation: animate 1s ease forwards;
+}
+
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 80%; }
+.progress-line.javascript span { width: 75%; }
+.progress-line.react span { width: 60%; }
+
+/* ---------------- Circular Skills ---------------- */
+
+.radical-bars {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.radical-bar {
+  text-align: center;
+  width: 150px;
+  margin: 20px;
+}
+
+.radical-bar svg {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+circle.path {
+  stroke: #333;
+}
+
+circle.progress-bar {
+  stroke: #ffbf69;
+  stroke-width: 3px;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+}
+
+.percentage {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  transform: translate(-50%, -50%);
+  
+}
+
+.radical-bar {
+  position: relative;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ---------------- Projects ---------------- */
+
+.portfolio {
+  padding: 100px 10%;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.row {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.row:hover {
+  transform: scale(1.03);
+}
+
+.row img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.layer {
+  padding: 15px;
+  text-align: center;
+}
+
+.layer h5 {
+  color: #1ae277;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.layer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.layer a i {
+  background: white;
+  color: red;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.layer a i:hover {
+  background-color: aquamarine;
+  color: black;
+}
+
+/* ---------------- Contact ---------------- */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 100px 10%;
+}
+
+.contact h1 {
+  font-size: 48px;
+}
+
+.contact h1 span {
+  color: #ffbf69;
+}
+
+.contact-list li {
+  list-style: none;
+  margin: 10px 0;
+  color: #ffbf69;
+}
+
+.contact-icon i {
+  font-size: 24px;
+  color: #ffbf69;
+  margin-right: 10px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact-form form .send {
+  background: #ffbf69;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form form .send:hover {
+  box-shadow: 0 0 10px #ffbf69;
+}
+
+/* ---------------- Footer ---------------- */
+
+.last-text {
+  text-align: center;
+  padding: 20px;
+  background: #07555b;
+  color: white;
+}
+
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffbf69;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.top i {
+  color: #000;
+}
+
+/* ---------------- Animations ---------------- */
+
+@keyframes slideRight {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideTop {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideBottom {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes animate {
+  to { transform: scaleX(1); }
+}
