@@ -368,7 +368,8 @@ circle.progress-bar {
 }
 #msg{
   color:#61b752;
-  margin-top:-40px;
+  margin-top:10px;
+  text-align: left;
   display: block;
 }
   
@@ -419,4 +420,5 @@ circle.progress-bar {
 @keyframes animate {
   to { transform: scaleX(1); }
 }
+
 
