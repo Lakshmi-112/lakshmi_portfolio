@@ -366,7 +366,12 @@ circle.progress-bar {
 .contact-form form .send:hover {
   box-shadow: 0 0 10px #ffbf69;
 }
-
+#msg{
+  color:#61b752;
+  margin-top:-40px;
+  display: block;
+}
+  
 /* ---------------- Footer ---------------- */
 
 .last-text {
@@ -414,3 +419,4 @@ circle.progress-bar {
 @keyframes animate {
   to { transform: scaleX(1); }
 }
+
